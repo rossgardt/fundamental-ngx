@@ -11,7 +11,10 @@ import {
     selector: 'fd-menu',
     templateUrl: './menu.component.html',
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['menu.component.scss']
+    styleUrls: [
+        'menu.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/menu.css'
+    ]
 })
 export class MenuComponent {
     /** @hidden */

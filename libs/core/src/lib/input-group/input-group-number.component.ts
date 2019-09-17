@@ -12,7 +12,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 @Component({
     selector: 'fd-input-group-number',
     templateUrl: './input-group-number.component.html',
-    styleUrls: ['./input-group.component.scss'],
+    styleUrls: [
+        './input-group.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/input-group.css',
+        '../../../../../node_modules/fundamental-styles/dist/input.css',
+        '../../../../../node_modules/fundamental-styles/dist/textarea.css'
+    ],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

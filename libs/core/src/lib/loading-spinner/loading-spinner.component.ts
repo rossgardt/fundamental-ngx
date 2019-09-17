@@ -10,7 +10,10 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
     selector: 'fd-loading-spinner',
     templateUrl: './loading-spinner.component.html',
-    styleUrls: ['./loading-spinner.component.scss'],
+    styleUrls: [
+        './loading-spinner.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/spinner.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class LoadingSpinnerComponent {

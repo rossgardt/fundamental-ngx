@@ -26,7 +26,9 @@ import { PopoverFillMode } from '../popover/popover-directive/popover.directive'
 @Component({
     selector: 'fd-multi-input',
     templateUrl: './multi-input.component.html',
-    styleUrls: ['./multi-input.component.scss'],
+    styleUrls: [
+        './multi-input.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/multi-input.css'],
     host: {
         '(blur)': 'onTouched()',
         '[class.fd-multi-input-custom]': 'true'

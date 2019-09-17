@@ -21,7 +21,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
     host: {
         class: 'fd-action-bar'
     },
-    styleUrls: ['./action-bar.component.scss'],
+    styleUrls: [
+        './action-bar.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/action-bar.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class ActionBarComponent {

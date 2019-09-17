@@ -18,7 +18,10 @@ import { LocalizationEditorMainComponent } from './localization-editor-main/loca
 @Component({
     selector: 'fd-localization-editor',
     templateUrl: './localization-editor.component.html',
-    styleUrls: ['localization-editor.component.scss'],
+    styleUrls: [
+        'localization-editor.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/localization-editor.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class LocalizationEditorComponent {

@@ -10,7 +10,10 @@ let toggleUniqueId: number = 0;
 @Component({
     selector: 'fd-toggle',
     templateUrl: './toggle.component.html',
-    styleUrls: ['./toggle.component.scss'],
+    styleUrls: [
+        './toggle.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/toggle.css'
+    ],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

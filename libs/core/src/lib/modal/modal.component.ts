@@ -23,7 +23,10 @@ import { ModalRef } from './modal-utils/modal-ref';
 
 @Component({
     selector: 'fd-modal',
-    styleUrls: ['modal.component.scss'],
+    styleUrls: [
+        'modal.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/modal.css'
+    ],
     templateUrl: './modal.component.html',
     host: {
         'role': 'dialog',

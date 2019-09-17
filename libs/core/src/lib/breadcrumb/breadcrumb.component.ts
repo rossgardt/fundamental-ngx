@@ -20,7 +20,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
     },
     template: `
         <ng-content></ng-content>`,
-    styleUrls: ['./breadcrumb.component.scss'],
+    styleUrls: [
+        './breadcrumb.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/breadcrumb.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class BreadcrumbComponent {

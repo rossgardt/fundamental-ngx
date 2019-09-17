@@ -7,7 +7,10 @@ import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild, V
 @Component({
     selector: 'fd-token',
     templateUrl: './token.component.html',
-    styleUrls: ['./token.component.scss'],
+    styleUrls: [
+        './token.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/token.css'
+    ],
     host: {
         class: 'fd-token',
         '[class.fd-token__disabled]': 'disabled',

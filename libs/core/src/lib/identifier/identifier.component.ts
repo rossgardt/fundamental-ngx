@@ -18,7 +18,10 @@ import { AbstractFdNgxClass } from '../utils/abstract-fd-ngx-class';
         '[class.fd-identifier]': 'true'
     },
     template: `<ng-content></ng-content>`,
-    styleUrls: ['./identifier.component.scss'],
+    styleUrls: [
+        './identifier.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/identifier.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class IdentifierComponent extends AbstractFdNgxClass {

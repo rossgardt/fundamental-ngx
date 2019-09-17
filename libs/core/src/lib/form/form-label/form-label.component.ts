@@ -13,7 +13,10 @@ import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
     // tslint:disable-next-line:component-selector
     selector: '[fd-form-label]',
     template: `<ng-content></ng-content>`,
-    styleUrls: ['./form-label.component.scss'],
+    styleUrls: [
+        './form-label.component.scss',
+        '../../../../../../node_modules/fundamental-styles/dist/form-label.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class FormLabelComponent {

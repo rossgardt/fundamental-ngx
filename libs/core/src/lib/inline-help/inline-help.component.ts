@@ -14,7 +14,10 @@ import { Placement } from 'popper.js';
     selector: 'fd-inline-help',
     templateUrl: './inline-help.component.html',
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['inline-help.component.scss']
+    styleUrls: [
+        'inline-help.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/inline-help.css'
+    ]
 })
 export class InlineHelpComponent {
 

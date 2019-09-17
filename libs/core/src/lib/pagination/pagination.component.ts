@@ -24,7 +24,10 @@ import { PaginationService } from './pagination.service';
         }
     `],
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./pagination.component.scss']
+    styleUrls: [
+        './pagination.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/pagination.css'
+    ]
 })
 export class PaginationComponent implements OnChanges {
     /** Represents the total number of items. */

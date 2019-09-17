@@ -10,7 +10,10 @@ import { AbstractFdNgxClass } from '../../utils/abstract-fd-ngx-class';
     selector: '[fd-badge]',
     template: `<ng-content></ng-content>`,
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./badge-label.component.scss']
+    styleUrls: [
+        './badge-label.component.scss',
+        '../../../../../../node_modules/fundamental-styles/dist/badge.css'
+    ]
 })
 export class BadgeComponent extends AbstractFdNgxClass {
     /** Color coded status for the badge. Options are 'success', 'warning', and 'error'. Leave empty for default badge. */

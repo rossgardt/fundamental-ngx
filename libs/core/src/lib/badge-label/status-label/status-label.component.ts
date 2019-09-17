@@ -10,7 +10,10 @@ import { AbstractFdNgxClass } from '../../utils/abstract-fd-ngx-class';
     selector: '[fd-status-label]',
     template: `<ng-content></ng-content>`,
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./status-label.component.scss']
+    styleUrls: [
+        './status-label.component.scss',
+        '../../../../../../node_modules/fundamental-styles/dist/status-label.css'
+    ]
 })
 export class StatusLabelComponent extends AbstractFdNgxClass {
     /** Color coded status for the label. Options are 'success', 'warning', and 'error'. Leave empty for default label. */

@@ -12,6 +12,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
         class: 'fd-list-group'
     },
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./list.component.scss']
+    styleUrls: [
+        './list.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/list-group.css'
+    ]
 })
 export class ListComponent {}

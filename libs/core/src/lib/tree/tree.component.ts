@@ -17,7 +17,10 @@ import { TreeChildComponent } from './tree-child.component';
     selector: 'fd-tree',
     templateUrl: './tree.component.html',
     encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./tree.component.scss']
+    styleUrls: [
+        './tree.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/tree.css'
+    ]
 })
 export class TreeComponent implements OnInit, AfterContentInit {
     @Input() headers: string[];

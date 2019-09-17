@@ -20,7 +20,10 @@ import { AbstractFdNgxClass } from '../utils/abstract-fd-ngx-class';
         '[class.fd-product-tile-custom]': 'true'
     },
     templateUrl: './product-tile.component.html',
-    styleUrls: ['./product-tile.component.scss'],
+    styleUrls: [
+        './product-tile.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/product-tile.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class ProductTileComponent extends AbstractFdNgxClass {

@@ -14,7 +14,15 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
     // tslint:disable-next-line: component-selector
     selector: '[fd-form-item]',
     template: `<ng-content></ng-content>`,
-    styleUrls: ['./form-item.component.scss'],
+    styleUrls: [
+        './form-item.component.scss',
+        '../../../../../../node_modules/fundamental-styles/dist/form-item.css',
+        '../../../../../../node_modules/fundamental-styles/dist/input.css',
+        '../../../../../../node_modules/fundamental-styles/dist/checkbox.css',
+        '../../../../../../node_modules/fundamental-styles/dist/radio.css',
+        '../../../../../../node_modules/fundamental-styles/dist/textarea.css',
+        '../../../../../../node_modules/fundamental-styles/dist/form-select.css',
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class FormItemComponent {

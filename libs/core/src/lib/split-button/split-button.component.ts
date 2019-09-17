@@ -27,7 +27,10 @@ import { PopoverFillMode } from '../popover/popover-directive/popover.directive'
 @Component({
     selector: 'fd-split-button',
     templateUrl: 'split-button.component.html',
-    styleUrls: ['./split-button.component.scss']
+    styleUrls: [
+        './split-button.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/button-split.css'
+    ]
 })
 export class SplitButtonComponent {
 

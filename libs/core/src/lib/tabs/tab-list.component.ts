@@ -23,7 +23,10 @@ import { TabsService } from './tabs.service';
 @Component({
     selector: 'fd-tab-list',
     templateUrl: './tab-list.component.html',
-    styleUrls: ['./tab-list.component.scss'],
+    styleUrls: [
+        './tab-list.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/tabs.css'
+    ],
     host: {
         class: 'fd-tabs-custom'
     },

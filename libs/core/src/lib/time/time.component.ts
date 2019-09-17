@@ -7,7 +7,11 @@ import { TimeI18n } from './i18n/time-i18n';
 @Component({
     selector: 'fd-time',
     templateUrl: './time.component.html',
-    styleUrls: ['./time.component.scss'],
+    styleUrls: [
+        './time.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/input.css',
+        '../../../../../node_modules/fundamental-styles/dist/time.css'
+    ],
     host: {
         '(blur)': 'onTouched()',
         class: 'fd-time fd-has-display-block'

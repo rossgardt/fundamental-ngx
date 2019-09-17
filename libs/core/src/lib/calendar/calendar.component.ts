@@ -42,7 +42,10 @@ export type DaysOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 @Component({
     selector: 'fd-calendar',
     templateUrl: './calendar.component.html',
-    styleUrls: ['./calendar.component.scss'],
+    styleUrls: [
+        './calendar.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/calendar.css'
+    ],
     encapsulation: ViewEncapsulation.None,
     providers: [
         {

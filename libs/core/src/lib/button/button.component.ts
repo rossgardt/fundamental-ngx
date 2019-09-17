@@ -13,7 +13,10 @@ import { AbstractFdNgxClass } from '../utils/abstract-fd-ngx-class';
     selector: `button[fd-button], a[fd-buton]`,
     exportAs: 'fd-button',
     template: `<ng-content></ng-content>`,
-    styleUrls: ['./button.component.scss'],
+    styleUrls: [
+        './button.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/button.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class ButtonComponent extends AbstractFdNgxClass {

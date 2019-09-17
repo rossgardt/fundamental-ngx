@@ -29,7 +29,10 @@ let alertUniqueId: number = 0;
 @Component({
     selector: 'fd-alert',
     templateUrl: './alert.component.html',
-    styleUrls: ['./alert.component.scss'],
+    styleUrls: [
+        './alert.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/alert.css'
+    ],
     host: {
         '[attr.aria-labelledby]': 'ariaLabelledBy',
         '[attr.aria-label]': 'ariaLabel',

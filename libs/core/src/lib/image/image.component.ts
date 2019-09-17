@@ -10,7 +10,10 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
     selector: 'fd-image',
     templateUrl: './image.component.html',
-    styleUrls: ['./image.component.scss'],
+    styleUrls: [
+        './image.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/image.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class ImageComponent {

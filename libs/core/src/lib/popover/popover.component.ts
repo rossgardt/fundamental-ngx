@@ -20,7 +20,10 @@ let popoverUniqueId: number = 0;
 @Component({
     selector: 'fd-popover',
     templateUrl: './popover.component.html',
-    styleUrls: ['./popover.component.scss'],
+    styleUrls: [
+        './popover.component.scss',
+        '../../../../../node_modules/fundamental-styles/dist/popover.css'
+    ],
     host: {
         '[class.fd-popover-custom]': 'true',
         '[attr.id]': 'id'

@@ -6,7 +6,10 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
     selector: 'fd-form-message',
     templateUrl: './form-message.component.html',
-    styleUrls: ['./form-message.component.scss'],
+    styleUrls: [
+        './form-message.component.scss',
+        '../../../../../../node_modules/fundamental-styles/dist/form-message.css'
+    ],
     encapsulation: ViewEncapsulation.None
 })
 export class FormMessageComponent {
