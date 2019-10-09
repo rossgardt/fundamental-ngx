@@ -1,6 +1,9 @@
 import { Input, ElementRef, Component, Directive } from '@angular/core';
 import { AbstractFdNgxClass } from '../../utils/abstract-fd-ngx-class';
 
+export type FormStates = 'valid' | 'error' | 'warning';
+
+
 /**
  * Directive intended for use on form controls.
  *
@@ -20,7 +23,7 @@ export class FormControlDirective extends AbstractFdNgxClass {
      *  Can be `valid`, `error`, `warning` or blank for default.
      */
     @Input()
-    state: string;
+    state: FormStates;
 
 
     @Input()

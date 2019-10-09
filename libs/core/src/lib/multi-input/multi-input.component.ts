@@ -17,6 +17,7 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { PopoverComponent } from '../popover/popover.component';
 import { PopoverFillMode } from '../popover/popover-directive/popover.directive';
+import { FormStates } from '@fundamental-ngx/core';
 
 /**
  * Input field with multiple selection enabled. Should be used when a user can select between a
@@ -113,6 +114,13 @@ export class MultiInputComponent implements OnInit, ControlValueAccessor, OnChan
      */
     @Input()
     fillControlMode: PopoverFillMode = 'at-least';
+
+    /**
+     *  The state of the form control - applies css classes.
+     *  Can be `valid`, `error`, `warning` or blank for default.
+     */
+    @Input()
+    state: FormStates;
 
     /** Event emitted when the search term changes. Use *$event* to access the new term. */
     @Output()

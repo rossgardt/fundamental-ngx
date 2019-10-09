@@ -16,6 +16,8 @@ import { FdDate } from '../calendar/models/fd-date';
 import { CalendarService } from '../calendar/calendar.service';
 import { FdRangeDate } from '../calendar/models/fd-range-date';
 import { DateFormatParser } from './format/date-parser';
+import { compact } from 'typedoc/dist/lib/output/helpers/compact';
+import { FormStates } from '../..';
 
 /**
  * The datetime picker component is an opinionated composition of the fd-popover and
@@ -119,6 +121,13 @@ export class DatePickerComponent implements ControlValueAccessor, Validator {
     /** Whether the date picker is disabled. */
     @Input()
     disabled: boolean;
+
+    /**
+     *  The state of the form control - applies css classes.
+     *  Can be `valid`, `error`, `warning` or blank for default.
+     */
+    @Input()
+    state: FormStates;
 
     /** Fired when a new date is selected. */
     @Output()

@@ -13,6 +13,7 @@ import {
     LocalizationEditorLabel,
     LocalizationEditorTextareaDirective
 } from '../localization-editor.directives';
+import { FormStates } from '../../..';
 
 /**
  *  Component that represents field with add-on.
@@ -40,6 +41,13 @@ export class LocalizationEditorItemComponent implements OnInit, AfterContentInit
     /** Whether to apply compact mode to to field. */
     @Input()
     compact: boolean;
+
+    /**
+     *  The state of the form control - applies css classes.
+     *  Can be `valid`, `error`, `warning` or blank for default.
+     */
+    @Input()
+    state: FormStates;
 
     /** @hidden */
     @ContentChild(LocalizationEditorInputDirective, { static: false })

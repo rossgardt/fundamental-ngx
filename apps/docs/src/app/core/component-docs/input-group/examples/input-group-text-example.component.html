@@ -7,3 +7,17 @@
 <fd-input-group [placement]="'after'" [addOnText]="'$'" [placeholder]="'Amount'">
 
 </fd-input-group>
+
+<br/>
+<div fd-form-item>
+    <label fd-form-label>Normal Input</label>
+    <fd-input-group [placeholder]="'Field placeholder text'" [addOnText]="'?'"></fd-input-group>
+    <fd-form-message [type]="'help'">Pellentesque metus lacus commodo eget justo ut rutrum varius nunc</fd-form-message>
+</div>
+
+<br/>
+<div fd-form-item>
+    <label fd-form-label>Combobox</label>
+    <fd-combobox [state]="'error'" [placeholder]="'Field placeholder text'"></fd-combobox>
+    <fd-form-message [type]="'error'">There is something wrong.</fd-form-message>
+</div>

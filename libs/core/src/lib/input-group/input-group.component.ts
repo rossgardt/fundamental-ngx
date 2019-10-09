@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { InputGroupAddOnDirective, InputGroupInputDirective } from './input-group-directives';
+import { FormStates } from '@fundamental-ngx/core';
 
 export type InputGroupPlacement = 'before' | 'after';
 
@@ -98,6 +99,13 @@ export class InputGroupComponent implements ControlValueAccessor {
     @Input()
     disabled: boolean;
 
+    /**
+     *  The state of the form control - applies css classes.
+     *  Can be `valid`, `error`, `warning` or blank for default.
+     */
+    @Input()
+    state: FormStates;
+
     /** Event emitted when the add-on button is clicked. */
     @Output()
     addOnButtonClicked: EventEmitter<any> = new EventEmitter<any>();
@@ -119,6 +127,21 @@ export class InputGroupComponent implements ControlValueAccessor {
     /** Get the value of the text input. */
     get inputText() {
         return this.inputTextValue;
+    }
+
+    /** @hidden */
+    get isWarning(): boolean {
+        return this.state === 'warning'
+    }
+
+    /** @hidden */
+    get isValid(): boolean {
+        return this.state === 'valid'
+    }
+
+    /** @hidden */
+    get isError(): boolean {
+        return this.state === 'error'
     }
 
     /** Set the value of the text input. */

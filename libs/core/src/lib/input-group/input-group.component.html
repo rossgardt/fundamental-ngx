@@ -15,6 +15,7 @@
     <ng-container *ngIf="!addOnElement">
 
         <span *ngIf="button"
+              [state]="state"
               fd-input-group-addon
               [button]="true"
               [placement]="placement">
@@ -31,10 +32,11 @@
         </span>
 
         <span *ngIf="!button"
+              [state]="state"
               fd-input-group-addon
               [placement]="placement">
             <ng-container *ngIf="!glyph">{{addOnText}}</ng-container>
-            <span *ngIf="glyph" [ngClass]="'sap-icon--' + glyph"></span>
+            <span *ngIf="glyph"  [ngClass]="'sap-icon--' + glyph"></span>
     </span>
     </ng-container>
 
@@ -49,10 +51,11 @@
         <ng-container *ngTemplateOutlet="inputTemplate"></ng-container>
     </ng-container>
     <input [(ngModel)]="inputText"
+           fd-input-group-input
+           [state]="state"
+           [compact]="compact"
            [disabled]="disabled"
            type="text"
            *ngIf="!inputElement && !inputTemplate"
-           placeholder="{{placeholder}}"
-           class="fd-input fd-input-group__default-input"
-           [ngClass]="{'fd-input--compact' : compact}">
+           placeholder="{{placeholder}}">
 </ng-template>
