@@ -400,6 +400,8 @@ import { NotificationOptionsExampleComponent } from './component-docs/notificati
 import { NotificationContentComponent } from './component-docs/notification/examples/component-as-content/notification-content.component';
 import { ScrollSpyOffsetExampleComponent } from './component-docs/scroll-spy/examples/scroll-spy-custom-offset/scroll-spy-offset-example.component';
 import { ComboboxOpenControlExampleComponent } from './component-docs/combobox/examples/combobox-open-control-example.component';
+import { DatePickerComplexI18nExampleComponent } from './component-docs/date-picker/examples/date-picker-complex-i18n-example/date-picker-complex-i18n-example.component';
+import { DatetimePickerComplexI18nExampleComponent } from './component-docs/datetime-picker/examples/datetime-picker-complex-i18n-example/datetime-picker-complex-i18n-example.component';
 
 
 @NgModule({
@@ -742,7 +744,9 @@ import { ComboboxOpenControlExampleComponent } from './component-docs/combobox/e
         NotificationComponentAsContentExampleComponent,
         NotificationAsObjectExampleComponent,
         NotificationOptionsExampleComponent,
-        NotificationContentComponent
+        NotificationContentComponent,
+        DatePickerComplexI18nExampleComponent,
+        DatetimePickerComplexI18nExampleComponent
     ],
 
     entryComponents: [
