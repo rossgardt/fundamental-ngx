@@ -22,7 +22,7 @@ import { DateTimeFormatParser } from './format/datetime-parser';
 import { FdDate } from '../calendar/models/fd-date';
 import { CalendarComponent, DaysOfWeek, FdCalendarView } from '../calendar/calendar.component';
 import { FdDatetime } from './models/fd-datetime';
-import { FormStates } from '@fundamental-ngx/core';
+import { FormStates } from '../form/form-control/form-states';
 
 /**
  * The datetime picker component is an opinionated composition of the fd-popover,

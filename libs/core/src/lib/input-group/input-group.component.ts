@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { InputGroupAddOnDirective, InputGroupInputDirective } from './input-group-directives';
-import { FormStates } from '@fundamental-ngx/core';
+import { FormStates } from '../form/form-control/form-states';
 
 export type InputGroupPlacement = 'before' | 'after';
 

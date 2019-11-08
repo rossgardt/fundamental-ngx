@@ -13,7 +13,7 @@ import { TimeObject } from '../time/time-object';
 import { TimeComponent } from '../time/time.component';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TimeFormatParser } from './format/time-parser';
-import { FormStates } from '@fundamental-ngx/core';
+import { FormStates } from '../form/form-control/form-states';
 
 @Component({
     selector: 'fd-time-picker',

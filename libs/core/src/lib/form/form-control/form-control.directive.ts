@@ -1,7 +1,6 @@
-import { Input, ElementRef, Component, Directive } from '@angular/core';
+import { Input, ElementRef, Directive } from '@angular/core';
 import { AbstractFdNgxClass } from '../../utils/abstract-fd-ngx-class';
-
-export type FormStates = 'valid' | 'error' | 'warning';
+import { FormStates } from './form-states';
 
 
 /**

@@ -24,7 +24,7 @@ import { MenuKeyboardService } from '../menu/menu-keyboard.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import focusTrap, { FocusTrap } from 'focus-trap';
-import { FormStates } from '@fundamental-ngx/core';
+import { FormStates } from '../form/form-control/form-states';
 
 /**
  * Allows users to filter through results and select a value.

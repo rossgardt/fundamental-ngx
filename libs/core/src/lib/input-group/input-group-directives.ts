@@ -1,7 +1,7 @@
-import { Directive, ElementRef, forwardRef, HostBinding, Input, Optional } from '@angular/core';
+import { Directive, ElementRef, HostBinding, Input } from '@angular/core';
 import { AbstractFdNgxClass } from '../utils/abstract-fd-ngx-class';
 import { InputGroupPlacement } from './input-group.component';
-import { FormStates } from '../..';
+import { FormStates } from '../form/form-control/form-states';
 
 @Directive({
     // tslint:disable-next-line:directive-selector
