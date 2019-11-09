@@ -81,7 +81,7 @@
             }
         }
 		&.fd-button--noborder {
-			  border-color: var(--sapButton_Lite_Background, transparent);
+			  border: var(--sapButton_Lite_Background, transparent);
 		}
 		&.fd-button--splitborder {
 			border:1px solid;
