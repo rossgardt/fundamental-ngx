@@ -400,6 +400,7 @@ import { NotificationOptionsExampleComponent } from './component-docs/notificati
 import { NotificationContentComponent } from './component-docs/notification/examples/component-as-content/notification-content.component';
 import { ScrollSpyOffsetExampleComponent } from './component-docs/scroll-spy/examples/scroll-spy-custom-offset/scroll-spy-offset-example.component';
 import { ComboboxOpenControlExampleComponent } from './component-docs/combobox/examples/combobox-open-control-example.component';
+import { SelectTypesExampleComponent } from './component-docs/select/examples/select-types-example/select-types-example.component';
 
 
 @NgModule({
@@ -733,6 +734,7 @@ import { ComboboxOpenControlExampleComponent } from './component-docs/combobox/e
         SelectFormsComponent,
         SelectViewValueExampleComponent,
         SelectMaxHeightExampleComponent,
+        SelectTypesExampleComponent,
         CalendarI18nMomentExampleComponent,
         SelectMaxHeightExampleComponent,
         NotificationDocsComponent,
