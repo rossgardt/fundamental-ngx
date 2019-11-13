@@ -82,6 +82,7 @@
         }
         &--loading {
             &::after {
+                color: var(--sapUiContentIconColor, #0854a0);
                 position: absolute;
                 right: 1rem;
                 align-self: center;
@@ -95,6 +96,7 @@
             &:focus {
                 &::after {
                     border: none;
+                    color: var(--sapUiContentIconColor, #0854a0)!important;
                     background-color: var(--sapUiFieldBackground, #ffffff)!important;
                 }
             }
@@ -116,12 +118,6 @@
                 &::after {
                     color: var(--sapUiButtonActiveTextColor, #ffffff);
                     background-color: var(--sapButton_Lite_Active_Background, #0854a0);
-                }
-                &:hover{
-                    &::after {
-                        color: var(--sapUiButtonActiveTextColor, #ffffff);
-                        background-color: var(--sapButton_Lite_Active_Background, #0854a0);
-                    }  
                 }
             }
         }
