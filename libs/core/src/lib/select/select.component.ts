@@ -1,11 +1,21 @@
 import {
-    AfterContentInit, ChangeDetectionStrategy, ChangeDetectorRef,
+    AfterContentInit,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
     ContentChildren,
-    EventEmitter, forwardRef, HostBinding, HostListener,
-    Input, OnChanges, OnDestroy,
+    EventEmitter,
+    forwardRef,
+    HostBinding,
+    HostListener,
+    Input,
+    OnChanges,
+    OnInit,
+    OnDestroy,
     Output,
-    QueryList, SimpleChanges, TemplateRef,
+    QueryList,
+    SimpleChanges,
+    TemplateRef,
     ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -32,12 +42,11 @@ import { PopoverFillMode } from '../popover/popover-directive/popover.directive'
     ],
     host: {
         '[class.fd-select-custom]': 'true',
-        'role': 'listbox',
+        role: 'listbox'
     },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, ControlValueAccessor {
-
+export class SelectComponent implements OnChanges, AfterContentInit, OnInit, OnDestroy, ControlValueAccessor {
     /** @hidden */
     @HostBinding('class.fd-dropdown')
     fdDropdownClass: boolean = true;
@@ -102,13 +111,11 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
 
     /** Event emitted when the popover open state changes. */
     @Output()
-    readonly isOpenChange: EventEmitter<boolean>
-        = new EventEmitter<boolean>();
+    readonly isOpenChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     /** Event emitted when the selected value of the select changes. */
     @Output()
-    readonly valueChange: EventEmitter<any>
-        = new EventEmitter<any>();
+    readonly valueChange: EventEmitter<any> = new EventEmitter<any>();
 
     /** @hidden */
     calculatedMaxHeight: number;
@@ -118,6 +125,8 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
 
     /** Subject triggered when the component is destroyed. */
     private readonly destroy$: Subject<void> = new Subject<void>();
+
+    @Input() loading;
 
     /** Observable triggered when an option has its selectedChange event fire. */
     private readonly optionsStatusChanges: Observable<OptionComponent> = defer(() => {
@@ -131,14 +140,12 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
     }) as Observable<OptionComponent>;
 
     /** @hidden */
-    onChange: Function = () => {};
+    onChange: Function = () => { };
 
     /** @hidden */
-    onTouched: Function = () => {};
+    onTouched: Function = () => { };
 
-    constructor (
-        private changeDetectorRef: ChangeDetectorRef
-    ) {}
+    constructor(private changeDetectorRef: ChangeDetectorRef) { }
 
     /** @hidden */
     isOpenChangeHandle(isOpen: boolean): void {
@@ -159,9 +166,12 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
         }
     }
 
+    ngOnInit() {
+        // console.log(this.loading);
+    }
+
     /** @hidden */
     ngAfterContentInit(): void {
-
         // If the observable state changes, reset the options and initialize selection.
         this.options.changes.pipe(startWith(null), takeUntil(this.destroy$)).subscribe(() => {
             this.resetOptions();
@@ -241,12 +251,12 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
     @HostListener('keydown', ['$event'])
     keydownHandler(event: KeyboardEvent): void {
         switch (event.code) {
-            case ('ArrowUp'): {
+            case 'ArrowUp': {
                 event.preventDefault();
                 this.decrementFocused();
                 break;
             }
-            case ('ArrowDown'): {
+            case 'ArrowDown': {
                 event.preventDefault();
                 this.incrementFocused();
                 break;
@@ -357,7 +367,6 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
 
     /** Method that focuses the next option in the list, or the first one if the last one is currently focused. */
     private incrementFocused(): void {
-
         // Get active focused element
         const activeElement = document.activeElement;
 
@@ -384,7 +393,6 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
 
     /** Method that focuses the previous option in the list, or the last one if the last one is currently focused. */
     private decrementFocused(): void {
-
         // Get active focused element
         const activeElement = document.activeElement;
 
@@ -424,5 +432,4 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnDestroy, 
             this.onChange(undefined);
         });
     }
-
 }

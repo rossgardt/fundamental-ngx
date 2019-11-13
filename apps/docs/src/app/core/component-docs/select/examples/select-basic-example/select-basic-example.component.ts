@@ -6,17 +6,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['select-basic-example.component.scss']
 })
 export class SelectBasicExampleComponent implements OnInit {
-
     selectOneValue: string;
 
     selectTwoValue: string;
 
     selectThreeValue: string;
+    values: string[] = ['apple', 'banana', 'orange', 'pear'];
+    constructor() { }
 
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
+    ngOnInit() { }
 }
