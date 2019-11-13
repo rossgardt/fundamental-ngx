@@ -6,7 +6,7 @@
         </ng-container>
         <ng-container *ngIf="!triggerTemplate">
             <button fd-button class="fd-select-button-custom" aria-haspopup="true" [ngClass]="{
-                    'fd-select-button-custom--loading': loading==null,
+                    'fd-select-button-custom--loading': loading,
                     'fd-button--compact': compact
                 }" [attr.aria-expanded]="isOpen" [disabled]="disabled">
                 <span class="fd-select-text-custom">{{ triggerValue }}</span>
